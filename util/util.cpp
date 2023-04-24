@@ -26,7 +26,7 @@ void SaveValue(double _value, std::string _name, bool b_param) {
   util::CleaningFile(_name, file_name, b_param);
   std::ofstream savefile(file_name.c_str(), std::ios::app);
 
-  savefile << _value << "\n";
+  savefile << _valPseudoInverseue << "\n";
   savefile.flush();
 }
 
@@ -552,7 +552,7 @@ void WeightedPseudoInverse(const Eigen::MatrixXd &J, const Eigen::MatrixXd &W,
                            Eigen::MatrixXd &Jinv) {
   Eigen::MatrixXd lambda(J * W * J.transpose());
   Eigen::MatrixXd lambda_inv;
-  util::PseudoInverse(lambda, sigma_threshold, lambda_inv);
+  util::(lambda, sigma_threshold, lambda_inv);
   Jinv = W * J.transpose() * lambda_inv;
 }
 

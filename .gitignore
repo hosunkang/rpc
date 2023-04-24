@@ -45,3 +45,5 @@ RLData
 *.json
 note.txt
 *.asv
+.idea/
+cmake-build-debug/
